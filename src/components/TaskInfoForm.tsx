@@ -117,7 +117,7 @@ const TaskInfoForm: React.FC<Props> = ({ task, deleteTask, updateTask }) => {
       </div>
 
       <div className="date">
-        <p>Created: {convertDateToNormal(task.start_date.toString())}</p>
+        <p>Created: {convertDateToNormal(task.start_date)}</p>
         <p>Finished: {convertDateToNormal(task.end_date)}</p>
       </div>
 

@@ -86,7 +86,7 @@ const Task: React.FC<Props> = ({ task }) => {
         </div>
         <div className="date">
           <p>Created: {convertDateToNormal(task.start_date)}</p>
-          {/* <p>Finished: {convertDateToNormal(task.end_date)}</p> */}
+          <p>Finished: {convertDateToNormal(task.end_date)}</p>
         </div>
       </button>
       {show && (
