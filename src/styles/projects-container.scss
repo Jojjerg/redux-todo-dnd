@@ -7,4 +7,26 @@
   min-height: 800px;
   column-gap: 32px;
   row-gap: 32px;
+
+  height: 720px;
+  padding-right: 4px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #4a4f50;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }  
 }

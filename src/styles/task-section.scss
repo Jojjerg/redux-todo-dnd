@@ -3,6 +3,27 @@
   min-height: 800px;
   display: flex;
   justify-content: space-evenly;
+
+  height: 720px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #4a4f50;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 .task-status-header {
@@ -24,7 +45,6 @@
   gap: 24px;
   border-radius: 12px;
 }
-
 .date {
   max-width: 400px;
 }
@@ -55,7 +75,7 @@
   &:enabled:hover {
     filter: brightness(85%);
   }
-  
+
   &:disabled {
     cursor: not-allowed;
     color: #adadad;

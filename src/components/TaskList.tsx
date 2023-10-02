@@ -59,8 +59,8 @@ const TaskList: React.FC<Props> = ({ ...props }) => {
       className="task-list-container"
     >
       <TaskStatusHeader status={props.status} />
-      {tasksToMap.length > 0 &&
-        tasksToMap.map((task) => <Task key={task.id} task={task} />)}
+        {tasksToMap.length > 0 &&
+          tasksToMap.map((task) => <Task key={task.id} task={task} />)}
     </div>
   );
 };

@@ -10,7 +10,7 @@ import Drag from "./Drag";
 import Modal from "./Modal";
 import { useDrag } from "react-dnd";
 import { countCommentIds } from "../utils/countCommentIds";
-import { convertDateToNormal } from '../utils/convertDateToNormal';
+import { convertDateToNormal } from "../utils/convertDateToNormal";
 
 interface StateProps {
   task: ITask;
@@ -52,6 +52,8 @@ const Task: React.FC<Props> = ({ task }) => {
       break;
   }
 
+  convertDateToNormal(task.start_date)
+
   return (
     <>
       <button
@@ -76,13 +78,15 @@ const Task: React.FC<Props> = ({ task }) => {
             <span>{Object.keys(commentsAmount).length}</span>
           </div>
           <div className="subtasks">
-            <i><BsListTask /></i>
+            <i>
+              <BsListTask />
+            </i>
             <span>{task.sub_tasks.length}</span>
           </div>
         </div>
         <div className="date">
-          <p>Created: {convertDateToNormal(task.start_date.toString())}</p>
-          <p>Finished: {convertDateToNormal(task.end_date)}</p>
+          <p>Created: {convertDateToNormal(task.start_date)}</p>
+          {/* <p>Finished: {convertDateToNormal(task.end_date)}</p> */}
         </div>
       </button>
       {show && (
