@@ -1,0 +1,60 @@
+.modal-overlay {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close{
+  position: absolute;
+  top: 15px;
+  left: calc(100% - 36px);
+  width: 24px;
+  height: 24px;
+  background: var(--background-color);
+  border: none;
+  outline: none;
+
+  z-index: 10001;
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: -2px;
+    left: 13px;
+    content: " ";
+    height: 24px;
+    width: 2px;
+    background-color: #ffffff;
+    opacity: 0.3;
+
+    transition: opacity 100ms ease-in;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

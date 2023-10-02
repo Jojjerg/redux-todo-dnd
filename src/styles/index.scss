@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background-color: #353839;
+  --accent-color: #1d795f;
+  --text-color: #d9d9d9;
+  --date-color: #8c8c8c;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background-color);
+}
+
+a,
+a:visited,
+h1 {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 20px;
+  font-weight: 700;
+
+  text-align: start;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+input {
+  color: var(--text-color);
+  width: 400px;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 14px;
+  padding: 12px 8px;
+  border: 1px solid #4a4f50;
+  border-radius: 8px;
+  background: var(--background-color);
+
+  outline: none;
+
+  transition: border 100ms ease-in;
+
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
+label {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+.date {
+  font-family: "Montserrat";
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+
+  & p {
+    color: var(--date-color);
+    text-align: start;
+    font-size: 12px;
+  }
+}
+
+.add-btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  outline: none;
+
+  font-family: "Montserrat";
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 200ms ease-in;
+
+  &:enabled:hover {
+    filter: brightness(90%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: #adadad;
+    background: #707070;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  p {
+    max-width: 320px;
+  }
+}

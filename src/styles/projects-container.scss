@@ -1,0 +1,10 @@
+.projects-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 800px;
+  column-gap: 32px;
+  row-gap: 32px;
+}

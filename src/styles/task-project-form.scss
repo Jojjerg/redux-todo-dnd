@@ -1,0 +1,143 @@
+.form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 18px;
+  border: 1px solid #4a4f50;
+  border-radius: 20px;
+  background: var(--background-color);
+  z-index: 1200;
+
+  max-height: 1000px;
+
+  animation: down 300ms ease-in-out forwards;
+
+  & form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-750px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.tasks-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 85dvh;
+  column-gap: 32px;
+  row-gap: 32px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 500px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & label, span {
+    font-family: "Montserrat", "sans-serif";
+    font-size: 16px;
+    color: var(--accent-color);
+  }
+
+  & input {
+    color: var(--text-color);
+    font-family: "Montserrat", "sans-serif";
+    font-size: 14px;
+    padding: 12px 8px;
+    border: 1px solid #4a4f50;
+    border-radius: 8px;
+    background: var(--background-color);
+
+    transition: all 100ms ease-in;
+  }
+
+  & textarea {
+    width: 400px;
+    height: 300px;
+    resize: none;
+    color: var(--text-color);
+    font-family: "Montserrat", "sans-serif";
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #4a4f50;
+    border-radius: 8px;
+    background: var(--background-color);
+
+    transition: all 100ms ease-in;
+  }
+
+  & textarea:focus, & input:focus & select:focus {
+    border: 1px solid white;
+    outline: none;
+  }
+
+  & input:read-only, div {
+    cursor: not-allowed;
+    border: 1px solid #3d3e3e;
+  }
+
+  & select {
+    color: var(--text-color);
+    font-family: "Montserrat", "sans-serif";
+    font-size: 14px;
+    padding: 12px 8px;
+    border: 1px solid #4a4f50;
+    border-radius: 8px;
+    background: var(--background-color);
+
+    transition: all 100ms ease-in;
+  }
+
+  & .status {
+    width: max-content;
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 700;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  & .working-time {
+    color: var(--text-color);
+    font-family: "Montserrat", "sans-serif";
+    font-size: 14px;
+    padding: 12px 8px;
+    border: 1px solid #3d3e3e;
+    border-radius: 8px;
+    background: var(--background-color);
+
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .task {
+    max-width: 360px;
+  }
+
+  .field textarea {
+    max-width: 350px;
+  }
+}

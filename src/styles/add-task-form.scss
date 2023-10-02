@@ -1,0 +1,36 @@
+.add-task-form {
+  width: 100%;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4a4f50;
+  border-radius: 20px;
+  background: var(--background-color);
+  gap: 32px;
+
+  min-width: 280px;
+  max-width: 390px;
+}
+
+.add-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  
+  & input {
+    max-width: 250px;
+  }
+
+  & input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+  }
+}
+
+.add-btn {
+  margin-bottom: 3px;
+  font-family: "Montserrat", "sans-serif";
+  font-size: 14px;
+  padding: 12px 24px;
+  background: var(--accent-color);
+}

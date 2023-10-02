@@ -1,0 +1,48 @@
+.top-level-btns-container {
+  position: absolute;
+  top: calc(100% - 140px);
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top-level-button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.2);
+
+  transition: box-shadow 200ms ease-in;
+
+  z-index: 1010;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  & span {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 400;
+  }
+}
+
+// .back-to-projects {
+//   padding: 17px 19px;
+
+// }
+
+// .call-modal-button {
+//   padding: 18px 30px;
+// }

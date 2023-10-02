@@ -1,0 +1,13 @@
+.drag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  max-width: 20px;
+}
+
+.drag-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgb(100, 103, 107);
+}
